@@ -1,0 +1,60 @@
+.login {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column; /* xếp dọc */
+    margin-left: 5%;            
+    margin-right: 15%;
+    padding: 45px;
+    border: 2px solid #028aaf;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.nhap {
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: 2px solid #8dbce7;
+    outline: none;
+    transition: border-color 0.3s; /* hiệu ứng chuyển màu mượt */
+    margin-top: 8px;
+}
+
+.nhap:hover {
+  border-color: rgb(8, 57, 163);       /* màu viền khi hover */
+}
+
+.nut {
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border: 2px solid #0bc2fa;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(14, 105, 241);
+    margin-top: 12px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.nut:hover {
+    border-color: #033747;
+}
+
+.text {
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 15%;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.text:hover,
+.text:active {
+    text-decoration: underline;       /* hiện gạch chân */
+    text-decoration-color: white;       /* màu gạch chân nổi bật */
+    text-decoration-thickness: 2px;   /* độ dày gạch chân */
+    outline: none;       
+}

@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(4, 143, 161); /* màu nền cho toàn trang */
+    margin: 0;
+    height: 100vh; /* toàn màn hình */
+    display: flex;
+    justify-content: center; /* canh giữa ngang */
+    align-items: center;     /* canh giữa dọc */
+}
+
+.parent {
+    width: 80%;              /* 80% chiều ngang */
+    height: 70%;             /* 70% chiều cao */
+    display: flex;           /* chia hàng ngang */
+}
+
+.child {   
+    flex: 1;            /* mỗi div chiếm bằng nhau */
+    display: flex;            /* QUAN TRỌNG: cần display flex để align-items và justify-content có tác dụng */
+    justify-content: center;  /* căn giữa ngang */
+    align-items: center;      /* căn giữa dọc */
+    flex-direction: column;   /* xếp ảnh và chữ theo cột */
+    text-align: center;
+}
+
+.child1 {   
+    background-color: rgb(7, 86, 105); 
+}
+
+.child2 {    
+    background-color: rgb(1, 28, 90); 
+}
+
+.child1 img {
+    width: 160px; /* chỉnh kích thước ảnh */
+    height: auto;
+}
