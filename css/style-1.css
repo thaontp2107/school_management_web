@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(56, 146, 182); /* màu nền cho toàn trang */
+    margin: 0;
+    height: 100vh; /* toàn màn hình */
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.parent {
+    top:0;
+    width: 100%;             
+    height: 10%;           
+    display: flex;           
+}
+
+.child {   
+    top: 0;
+    left: 0;
+    display: flex;  
+    flex-direction: row ;         
+}
+
+.child1 {   
+    flex: 3;
+    background-color: rgb(233, 103, 114); 
+}
+
+.child2 {   
+    flex: 7; 
+    background-color: rgb(179, 167, 201); 
+}
+
+.child1 img {
+    width: 40px; /* chỉnh kích thước ảnh */
+    height: auto;
+}
+

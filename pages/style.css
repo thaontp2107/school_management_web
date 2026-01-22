@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: rgb(45, 131, 165); 
+    justify-content: center; 
+
+}
+
+/* Left menu */
+.sidebar {
+    display: flex;  
+    flex-direction: column;         
+    width: 220px;
+}
+
+.tren {
+    display: flex;
+    flex:  1;
+    flex-direction: row; 
+    background-color: rgb(173, 104, 100);
+}
+
+/* Hamburger button */
+.hamburger {
+    font-size: 35px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: white;
+    margin-left: 50%;
+}
+
+.sidebar img {
+    width: 60px;
+    height: 60px;
+    margin-top: 20px;;
+}
+
+.duoi {
+    background-color: #023261;
+    flex: 9;
+    transition: 0.3s;
+    flex-direction: column; 
+    color: white;
+    padding: 20px;
+    width: 220px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   
+    
+}
+
+.duoi li {
+    padding: 12px 16px;;
+    border-bottom: 1px solid black; /* đường kẻ */
+}
+
+.duoi li:last-child {
+    border-bottom: none;
+}
+
+.menu li {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: normal;
+    align-items: center; 
+    gap: 15px;
+    display: flex;
+}
+
+.menu li.active {
+    font-weight: bold;   
+    background: rgba(255,255,255,0.15); /* tuỳ chọn */   
+}
+
+
+.menu li img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
+
+.sidebar ul li:hover {
+    background: #4a6783;
+}
+
+/* Right content */
+.content {
+    flex: 1;
+    display: column;
+}
+
+.trenp {
+    background-color: rgb(202, 168, 202);
+    padding: 15px;
+    margin: 0;
+    height: 10%;
+}
+
+.content-box {
+    background: white;
+    padding: 30px;
+    margin-top: 80px;
+    min-height: 700px;
+    margin-left: 40px;
+}
+
+
+
+
+
