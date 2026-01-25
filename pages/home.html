@@ -6,42 +6,37 @@
     <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
-
-<div class="container">
-    <!-- Left Navigation -->
-    <div class="sidebar" id="sidebar">
-        <div class="tren">
-            <img src="../images/ic_welcome.png" alt="welcome logo">
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="tren">
+                <img src="../images/ic_welcome.png" alt="welcome logo">
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+            </div>
+        <div class="duoi">
+            <ul class="menu">
+                <li onclick="changePage('dashboard', this)">
+                    <img src="../images/dashboard.png">Dashboard</li>
+                <li onclick="changePage('Students', this)">
+                    <img src="../images/student.png">Students</li>
+                <li onclick="changePage('staff', this)">
+                    <img src="../images/academic staff.png">Academic Staff</li>
+                <li onclick="changePage('non-academic', this)">
+                    <img src="../images/non-academic.png">Non-Academic</li>
+                <li onclick="changePage('parent', this)">
+                    <img src="../images/parent.png">Parent</li>
+                <li onclick="changePage('admin', this)">
+                    <img src="../images/admin.png">Admin</li>
+            </ul>
+        </div> 
         </div>
-    <div class="duoi">
-        <ul class="menu">
-            <li onclick="changePage('dashboard', this)">
-                 <img src="../images/dashboard.png">Dashboard</li>
-            <li onclick="changePage('students', this)">
-                <img src="../images/student.png">Students</li>
-            <li onclick="changePage('staff', this)">
-                <img src="../images/academic staff.png">Academic Staff</li>
-            <li onclick="changePage('non-academic', this)">
-                <img src="../images/non-academic.png">Non-Academic</li>
-            <li onclick="changePage('parent', this)">
-                <img src="../images/parent.png">Parent</li>
-            <li onclick="changePage('admin', this)">
-                <img src="../images/admin.png">Admin</li>
-        </ul>
-    </div> 
-    </div>
-
-    <!-- Right Content -->
-    <div class="content">
-        <div class="trenp">
-            <h1 id="title"></h1>
-        </div>
-        <div class="content-box" id="contentBox">
+        <div class="content">
+            <div class="trenp">
+                <h1 id="title"></h1>
+            </div>
+            <div class="content-box" id="contentBox">
+            </div>
         </div>
     </div>
-</div>
-
-<script src="../js/home.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>

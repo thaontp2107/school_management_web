@@ -2,13 +2,12 @@ function showContent(section) {
     const title = document.getElementById("title");
     const box = document.getElementById("contentBox");
     
-
     if (section === "dashboard") {
         title.innerText = "Dashboard";
         box.innerText = "Nội dung Dashboard";
-    } else if (section === "students") {
+    } else if (section === "Students") {
         title.innerText = "Students";
-        box.innerText = "Danh sách sinh viên";
+        loadPage("../pages/student_list.html");  
     } else if (section === "staff") {
         title.innerText = "Academic Staff";
         box.innerText = "Danh sách giảng viên";
@@ -25,29 +24,38 @@ function showContent(section) {
 }
 
 function changePage(menu, element) {
-    // Xóa active của tất cả menu
     document.querySelectorAll(".menu li")
         .forEach(item => item.classList.remove("active"));
-
-    // Gán active cho mục đang bấm
     element.classList.add("active");
+    showContent(menu);
+}
 
-    // // Đổi tiêu đề & nội dung
-    document.getElementById("title").innerText = menu;
-    document.getElementById("contentBox").innerText = "Nội dung " + menu;
+function loadPage(url) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error("Load error");
+            return res.text();
+        })
+        .then(html => {
+            document.getElementById("contentBox").innerHTML = html;
+        })
+        .catch(() => {
+            document.getElementById("contentBox").innerText =
+                "Không tải được nội dung";
+        });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const firstMenu = document.querySelector(".menu li");
     if (firstMenu) {
         firstMenu.classList.add("active");
-        changePage("Dashboard", firstMenu);
+        showContent("dashboard"); 
     }
 });
-
 
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.style.display =
         sidebar.style.display === "none" ? "block" : "none";
 }
+

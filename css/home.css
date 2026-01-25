@@ -112,3 +112,19 @@
     min-height: 700px;
     margin-left: 40px;
 }
+
+.student-header,
+.student-row {
+    display: grid;
+    grid-template-columns: 70px 140px 100px 140px;
+    column-gap: 40px; 
+    align-items: center;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.student-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
