@@ -19,7 +19,7 @@ function showContent(section) {
         box.innerText = "Parent";
     } else if (section === "admin") {
         title.innerText = "Admin";
-        box.innerText = "Trang quản trị";
+        loadPage("../pages/add-student.html");
     }
 }
 
@@ -53,9 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function loadPage(url) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error("Load error");
+            return res.text();
+        })
+        .then(html => {
+            document.getElementById("contentBox").innerHTML = html;
+        })
+        .catch(() => {
+            document.getElementById("contentBox").innerText =
+                "Không tải được nội dung";
+        });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const firstMenu = document.querySelector(".menu li");
+    if (firstMenu) {
+        firstMenu.classList.add("active");
+        showContent("dashboard"); 
+    }
+});
+
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.style.display =
         sidebar.style.display === "none" ? "block" : "none";
 }
+
 
