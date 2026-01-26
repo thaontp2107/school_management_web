@@ -19,7 +19,7 @@ function showContent(section) {
         box.innerText = "Parent";
     } else if (section === "admin") {
         title.innerText = "Admin";
-        box.innerText = "Trang quản trị";
+        loadPage("../pages/add-student.html");
     }
 }
 
@@ -58,4 +58,5 @@ function toggleMenu() {
     sidebar.style.display =
         sidebar.style.display === "none" ? "block" : "none";
 }
+
 
