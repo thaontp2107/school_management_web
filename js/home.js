@@ -53,21 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function loadPage(url) {
-    fetch(url)
-        .then(res => {
-            if (!res.ok) throw new Error("Load error");
-            return res.text();
-        })
-        .then(html => {
-            document.getElementById("contentBox").innerHTML = html;
-        })
-        .catch(() => {
-            document.getElementById("contentBox").innerText =
-                "Không tải được nội dung";
-        });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     const firstMenu = document.querySelector(".menu li");
     if (firstMenu) {
