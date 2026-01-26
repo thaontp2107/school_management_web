@@ -53,14 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const firstMenu = document.querySelector(".menu li");
-    if (firstMenu) {
-        firstMenu.classList.add("active");
-        showContent("dashboard"); 
-    }
-});
-
 function toggleMenu() {
     const sidebar = document.getElementById("sidebar");
     sidebar.style.display =
