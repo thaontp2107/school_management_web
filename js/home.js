@@ -2,23 +2,22 @@ function showContent(section) {
     const title = document.getElementById("title");
     const box = document.getElementById("contentBox");
     
-
-    if (section === "dashboard") {
+    if (section === "Dashboard") {
         title.innerText = "Dashboard";
         box.innerText = "Nội dung Dashboard";
-    } else if (section === "students") {
+    } else if (section === "Students") {
         title.innerText = "Students";
         box.innerText = "Danh sách sinh viên";
-    } else if (section === "staff") {
+    } else if (section === "Staff") {
         title.innerText = "Academic Staff";
         box.innerText = "Danh sách giảng viên";
-    } else if (section === "non-academic") {
+    } else if (section === "Non-Academic") {
         title.innerText = "Non-Academic";
         box.innerText = "Non-academic";
-    } else if (section === "parent") {
+    } else if (section === "Parent") {
         title.innerText = "Parent";
         box.innerText = "Parent";
-    } else if (section === "admin") {
+    } else if (section === "Admin") {
         title.innerText = "Admin";
         box.innerText = "Trang quản trị";
     }
@@ -26,7 +25,7 @@ function showContent(section) {
 
 function changePage(menu, element) {
     // Xóa active của tất cả menu
-    document.querySelectorAll(".menu li")
+    document.querySelectorAll("#menu li")
         .forEach(item => item.classList.remove("active"));
 
     // Gán active cho mục đang bấm
@@ -38,16 +37,15 @@ function changePage(menu, element) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const firstMenu = document.querySelector(".menu li");
+    const firstMenu = document.querySelector("#menu li");
     if (firstMenu) {
         firstMenu.classList.add("active");
         changePage("Dashboard", firstMenu);
     }
 });
 
-
 function toggleMenu() {
-    const sidebar = document.getElementById("sidebar");
-    sidebar.style.display =
-        sidebar.style.display === "none" ? "block" : "none";
+    const menu = document.getElementById("menu");
+    menu.style.display =
+        menu.style.display === "none" ? "block" : "none";
 }

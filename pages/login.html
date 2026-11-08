@@ -16,16 +16,29 @@
         </div>
         <div class="child child2">
             <div class="login">
-                <input type="text" class="nhap" placeholder="Enter User Name">
-                <input type="password" class="nhap" placeholder="Enter Your Password">
+                <input type="text" id="username" class="nhap"
+                    placeholder="Enter User Name">
+
+                <input type="password" id="password" class="nhap"
+                    placeholder="Enter Your Password">
+
                 <br>
-                <a href="#" > Forgot your password?</a>
-                <a href="home.html" class="nut"> SIGN IN </a>
-                <a href="register.html" class="nut"> REGISTER </a>
+
+                <a href="#">Forgot your password?</a>
+
+                <button type="button" class="nut" id="btnLogin">
+                    SIGN IN
+                </button>
+
+                <a href="register.html" class="nut">REGISTER</a>
+
+                <p id="message"></p>
             </div> 
             <a href="#" class="text">School Management System for <br> THE ABC COLLAGE</a>
         </div>
     </div>
+
+    <script src="../js/login.js"></script>
     
 </body>
 </html>

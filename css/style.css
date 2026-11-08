@@ -1,24 +1,23 @@
 body {
-    background-color: rgb(4, 143, 161); /* màu nền cho toàn trang */
-    margin: 0;
-    height: 100vh; /* toàn màn hình */
+    background-color: rgb(4, 143, 161); 
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* canh giữa ngang */
-    align-items: center;     /* canh giữa dọc */
+    justify-content: center; 
+    align-items: center;    
 }
 
 .parent {
-    width: 80%;              /* 80% chiều ngang */
-    height: 70%;             /* 70% chiều cao */
-    display: flex;           /* chia hàng ngang */
+    width: 80%;            
+    height: 70%;            
+    display: flex;          
 }
 
 .child {   
-    flex: 1;            /* mỗi div chiếm bằng nhau */
-    display: flex;            /* QUAN TRỌNG: cần display flex để align-items và justify-content có tác dụng */
-    justify-content: center;  /* căn giữa ngang */
-    align-items: center;      /* căn giữa dọc */
-    flex-direction: column;   /* xếp ảnh và chữ theo cột */
+    flex: 1;            
+    display: flex;           
+    justify-content: center;  
+    align-items: center;      
+    flex-direction: column;  
     text-align: center;
 }
 
@@ -31,6 +30,6 @@ body {
 }
 
 .child1 img {
-    width: 160px; /* chỉnh kích thước ảnh */
+    width: 160px;
     height: auto;
 }
